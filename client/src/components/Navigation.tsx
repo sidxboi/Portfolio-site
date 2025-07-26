@@ -99,7 +99,7 @@ export default function Navigation() {
             </button>
           ))}
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
