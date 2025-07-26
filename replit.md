@@ -100,3 +100,10 @@ The application follows a modern frontend-only architecture optimized for static
 - **Asset Optimization**: Image and CSS optimization
 - **Tree Shaking**: Unused code elimination
 - **Modern Build**: ES modules and modern JavaScript features
+
+## Recent Changes
+
+### January 26, 2025
+- Fixed Vite host blocking issue by adding allowedHosts configuration in server/index.ts
+- Added support for Replit development environment domains to prevent host blocking errors
+- Configured server to accept connections from Replit preview domains (.replit.dev)

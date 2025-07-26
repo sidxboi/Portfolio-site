@@ -8,6 +8,12 @@ async function startServer() {
       server: {
         host: "0.0.0.0",
         port: 5000,
+        allowedHosts: [
+          "ce921816-e24f-48ee-b94b-828e3b5a37e4-00-elkob6opmkgn.worf.replit.dev",
+          ".replit.dev",
+          "localhost",
+          "127.0.0.1"
+        ],
       },
     });
 
