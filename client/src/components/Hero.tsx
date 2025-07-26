@@ -14,7 +14,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative hero-bg">
+    <section id="home" className="min-h-screen flex items-center justify-center relative hero-bg pt-20 md:pt-24">
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="perspective-1000">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-slide-up floating-card">
