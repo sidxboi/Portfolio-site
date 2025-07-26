@@ -69,11 +69,11 @@ export default function Contact() {
                   </div>
                   <h3 className="text-lg font-semibold text-gray-300 mb-2">{info.label}</h3>
                   {info.href === "#" ? (
-                    <p className="text-white">{info.value}</p>
+                    <p className="text-white break-words text-sm md:text-base">{info.value}</p>
                   ) : (
                     <a 
                       href={info.href} 
-                      className={`text-white hover:${info.color} transition-colors`}
+                      className={`text-white hover:${info.color} transition-colors break-words text-sm md:text-base block`}
                     >
                       {info.value}
                     </a>

@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="perspective-1000">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-slide-up floating-card">
             <span className="bg-gradient-to-r from-[var(--indigo)] via-[var(--purple)] to-[var(--emerald)] bg-clip-text text-transparent">
-              Sidhant Ranjan
+              Sidhant Ranjan Medhi
             </span>
           </h1>
         </div>
