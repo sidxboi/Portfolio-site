@@ -2,54 +2,44 @@
 
 ## Overview
 
-This is a modern full-stack portfolio application built for Sidhant Ranjan Medhi, showcasing his work as a Computer Science & Engineering student. The application features a sleek, dark-themed design with interactive elements, floating particles, and smooth scrolling navigation. It serves as both a personal portfolio and a demonstration of modern web development skills.
+This is a modern frontend-only portfolio application built for Sidhant Ranjan Medhi, showcasing his work as a Computer Science & Engineering student. The application features a sleek, dark-themed design with interactive elements, floating particles, smooth scrolling navigation, and 3D effects. It serves as both a personal portfolio and a demonstration of modern web development skills. Designed for easy deployment to platforms like Vercel.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Architecture preference: Frontend-only for easy deployment without backend dependencies.
 
 ## System Architecture
 
-The application follows a full-stack architecture with clear separation between client and server components:
+The application follows a modern frontend-only architecture optimized for static deployment:
 
 ### Frontend Architecture
 - **Framework**: React 18 with TypeScript
-- **Styling**: Tailwind CSS with custom CSS variables for theming
-- **UI Components**: Shadcn/ui component library built on Radix UI primitives
-- **Routing**: Wouter for lightweight client-side routing
-- **State Management**: TanStack Query for server state management
+- **Styling**: Tailwind CSS with custom CSS variables for theming and 3D effects
+- **UI Components**: Shadcn/ui component library built on Radix UI primitives (minimal usage)
 - **Build Tool**: Vite for fast development and optimized production builds
-
-### Backend Architecture
-- **Runtime**: Node.js with Express.js framework
-- **Database**: PostgreSQL with Drizzle ORM
-- **Database Provider**: Neon Database (serverless PostgreSQL)
-- **Session Management**: Connect-pg-simple for PostgreSQL session storage
-- **API Design**: RESTful API structure with `/api` prefix
+- **Animations**: CSS-based 3D transforms, floating particles, and smooth scroll effects
+- **Deployment**: Optimized for static hosting platforms like Vercel
 
 ### Development Architecture
-- **Language**: TypeScript throughout the entire stack
-- **Monorepo Structure**: Shared types and schemas between client and server
-- **Development Server**: Vite dev server with Express backend integration
+- **Language**: TypeScript for type safety
+- **Development Server**: Vite dev server for fast development experience
 - **Hot Module Replacement**: Enabled for rapid development
+- **Asset Management**: Support for attached assets through Vite aliases
+- **No Backend Dependencies**: Pure client-side application
 
 ## Key Components
 
-### Client-Side Components
-1. **Navigation**: Floating navigation bar with smooth scrolling to sections
-2. **Hero Section**: Animated introduction with gradient text effects
-3. **About Section**: Personal background and key achievements
-4. **Skills Section**: Interactive skill bars with categories (Frontend, Backend, AI/ML)
-5. **Projects Section**: Portfolio showcase with technology tags and links
-6. **Experience Section**: Timeline-based work and education history
-7. **Contact Section**: Interactive contact form with social media links
-8. **Footer**: Additional contact information and branding
-
-### Server-Side Components
-1. **Express Server**: Main application server with middleware setup
-2. **Route Handler**: Centralized route registration system
-3. **Storage Interface**: Abstracted storage layer with in-memory implementation
-4. **Vite Integration**: Development-time integration for SSR and HMR
+### Application Components
+1. **Navigation**: Floating navigation bar with smooth scrolling to sections and active section highlighting
+2. **Hero Section**: Animated introduction with gradient text effects and 3D floating elements
+3. **About Section**: Personal background and key achievements with interactive cards
+4. **Skills Section**: Interactive skill bars with categories (Frontend, Backend, AI/ML) and animations
+5. **Projects Section**: Portfolio showcase with 3D hover effects, technology tags, and external links
+6. **Experience Section**: Timeline-based work and education history with alternating layout
+7. **Contact Section**: Contact information display with working social media buttons (no form)
+8. **Footer**: Social media links and copyright information
+9. **Floating Particles**: Background animation system for enhanced visual appeal
 
 ### UI System
 - **Design System**: Dark theme with navy background and accent colors
@@ -59,36 +49,28 @@ The application follows a full-stack architecture with clear separation between 
 
 ## Data Flow
 
-### Client-Side Data Flow
+### Component Interaction Flow
 1. **Component Rendering**: React components render with TypeScript type safety
-2. **State Management**: TanStack Query handles server state and caching
-3. **Form Handling**: React Hook Form with Zod validation
-4. **API Communication**: Fetch-based API client with error handling
+2. **Navigation**: Smooth scroll behavior with active section detection
+3. **User Interactions**: Click handlers for navigation, social links, and external project links
+4. **Visual Effects**: CSS animations, 3D transforms, and particle system management
 
-### Server-Side Data Flow
-1. **Request Processing**: Express middleware handles incoming requests
-2. **Route Handling**: Centralized route registration with type safety
-3. **Database Operations**: Drizzle ORM provides type-safe database queries
-4. **Response Formatting**: Consistent JSON response structure
-
-### Database Schema
-- **Users Table**: Basic user management with ID, username, and password fields
-- **Schema Validation**: Drizzle-Zod integration for runtime type checking
-- **Migrations**: Drizzle Kit manages database schema changes
+### Content Management
+- **Static Content**: All portfolio data hardcoded in components for reliability
+- **External Links**: Direct links to GitHub repositories, LinkedIn, and email
+- **Asset Handling**: Vite-based asset management with alias support
 
 ## External Dependencies
 
 ### Core Dependencies
-- **Database**: Neon Database for serverless PostgreSQL hosting
-- **UI Framework**: Radix UI for accessible component primitives
-- **Validation**: Zod for runtime type validation
-- **Styling**: Tailwind CSS for utility-first styling
-- **Animation**: Framer Motion capabilities through CSS animations
+- **UI Framework**: Minimal Radix UI components for tooltips
+- **Styling**: Tailwind CSS for utility-first styling and 3D effects
+- **Icons**: Lucide React for consistent iconography
 
 ### Development Dependencies
-- **Build Tools**: Vite, ESBuild for fast builds and bundling
+- **Build Tools**: Vite for fast builds and development server
 - **Type Checking**: TypeScript compiler with strict configuration
-- **Code Quality**: PostCSS for CSS processing
+- **CSS Processing**: PostCSS and Tailwind CSS processing
 
 ### Optional Integrations
 - **Replit Integration**: Development environment optimizations for Replit
@@ -97,24 +79,24 @@ The application follows a full-stack architecture with clear separation between 
 ## Deployment Strategy
 
 ### Production Build Process
-1. **Frontend Build**: Vite builds optimized client-side assets
-2. **Backend Build**: ESBuild bundles server code with external dependencies
-3. **Asset Optimization**: CSS and JavaScript minification and optimization
-4. **Type Checking**: Full TypeScript compilation check before deployment
+1. **Frontend Build**: Vite builds optimized static assets for deployment
+2. **Asset Optimization**: CSS and JavaScript minification and optimization
+3. **Type Checking**: Full TypeScript compilation check before deployment
+4. **Static Generation**: All assets bundled for static hosting
 
-### Environment Configuration
-- **Database**: PostgreSQL connection via DATABASE_URL environment variable
-- **Session Security**: Secure session management with PostgreSQL storage
-- **Development vs Production**: Environment-specific configurations
+### Deployment Platforms
+- **Vercel**: Optimized for static deployment with automatic builds
+- **Netlify**: Alternative static hosting platform
+- **GitHub Pages**: Free hosting option for static sites
+- **Any Static Host**: Compatible with any static file hosting service
 
-### Hosting Considerations
-- **Static Assets**: Client build output served from `/dist/public`
-- **API Endpoints**: Express server handles `/api/*` routes
-- **Database**: Serverless PostgreSQL for scalable data storage
-- **Session Persistence**: Database-backed sessions for user state
+### Build Output
+- **Static Assets**: All files output to `/dist/public` directory
+- **No Server Required**: Pure client-side application
+- **CDN Compatible**: Optimized for content delivery networks
 
-### Security Features
-- **Environment Variables**: Sensitive configuration via environment variables
-- **Session Management**: Secure session handling with database storage
-- **Input Validation**: Runtime validation using Zod schemas
-- **CORS Configuration**: Proper cross-origin resource sharing setup
+### Performance Features
+- **Code Splitting**: Automatic code splitting by Vite
+- **Asset Optimization**: Image and CSS optimization
+- **Tree Shaking**: Unused code elimination
+- **Modern Build**: ES modules and modern JavaScript features

@@ -38,7 +38,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="skills" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[var(--emerald)] to-[var(--indigo)] bg-clip-text text-transparent">
